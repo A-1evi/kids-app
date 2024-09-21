@@ -1,13 +1,14 @@
-import React from "react";
-import { Link } from "react-router-dom";
+
+import { Link, useNavigate } from "react-router-dom";
 
 const Alphabet = () => {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
-
+    const navigate = useNavigate();
   const handleClick = (letter) => {
     // This function is called when a letter is clicked.
     console.log(`You clicked on: ${letter}`);
-    // You can trigger audio or animation here, or navigate to a detailed page for each letter.
+    navigate(`/learn/alphabet/${letter}`);
+
   };
 
   return (

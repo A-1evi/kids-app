@@ -14,7 +14,7 @@ const LearningOptions = () => {
       <div className="grid grid-cols-2 gap-10 absolute">
         <button
           className="bg-yellow-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-yellow-600 transition duration-300"
-          onClick={() => navigate("/learn/A")}
+          onClick={() => navigate("/learn/alphabet")}
         >
           Alphabets
         </button>
