@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div className="relative min-h-screen flex items-center justify-center bg-black">
       <img
-        src="src/assets/main.png"
+        src="https://ik.imagekit.io/tceymjb1w/kids-app/Main-BG.png?updatedAt=1726935959744"
         alt="Cosmic Background"
         className="absolute inset-0 w-full h-full object-cover"
       />
@@ -17,7 +17,7 @@ const Home = () => {
       </div>
       <div className="absolute inset-0 w-20 pointer-events-none overflow-hidden">
         <img
-          src="src/assets/stars.png"
+          src="https://ik.imagekit.io/tceymjb1w/kids-app/_Pngtree_cartoon%20stars_7211136.png?updatedAt=1726935958444"
           alt="Floating Stars"
           className="animate-float"
         />
