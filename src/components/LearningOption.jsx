@@ -18,13 +18,19 @@ const LearningOptions = () => {
         >
           Alphabets
         </button>
-        <button className="bg-pink-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-pink-600 transition duration-300">
-          Numbers
+        <button
+          className="bg-pink-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-pink-600 transition duration-300"
+          onClick={() => navigate("/learn/story")}
+        >
+          Stories
         </button>
         <button className="bg-purple-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-purple-600 transition duration-300">
           Poems
         </button>
-        <button className="bg-red-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-red-600 transition duration-300">
+        <button
+          className="bg-red-500 text-3xl text-white py-4 px-8 rounded-lg hover:bg-red-600 transition duration-300"
+          onClick={() => navigate("/learn/shapes")}
+        >
           Shapes
         </button>
       </div>

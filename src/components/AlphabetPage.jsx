@@ -10,7 +10,7 @@ const AlphabetPage = () => {
   const [context, setContext] = useState(null);
 
   // You can create a mapping of YouTube video links to letters
-  const videoUrl = `https://www.youtube.com/watch?v=C7oebqj3PCY&letter=${letter}`;
+  const videoUrl = `https://www.youtube.com/watch?v=C7oebqj3PCY}`;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -20,13 +20,13 @@ const AlphabetPage = () => {
     ctx.lineWidth = 10; // Set stroke width
 
     // Draw the letter in light gray as a background for tracing
-    ctx.font = "bold 200px Arial";
-    ctx.fillStyle = "rgba(200, 200, 200, 0.4)";
+    ctx.font = "bold 300px Arial";
+    ctx.fillStyle = "rgba(200, 200, 200, 0.8)";
     ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous drawings
     ctx.fillText(
       letter.toUpperCase(),
-      canvas.width / 3,
-      canvas.height / 2 + 50
+      canvas.width / 4,
+      canvas.height / 2 + 100
     ); // Center the letter
 
     setContext(ctx);
@@ -52,16 +52,18 @@ const AlphabetPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-gradient-to-r from-purple-300 to-blue-500">
+    <div className="max-h-screen  flex flex-col items-center justify-center bg-gradient-to-r from-purple-300 to-blue-500">
       <h1 className="text-white text-6xl font-bold mb-5">
         Letter {letter.toUpperCase()}
       </h1>
 
       {/* Video Player */}
       <ReactPlayer
+
         url={videoUrl} // Dynamically load video URL
-        width="100%"
-        height="360px"
+        width="800px"
+        height="480px"
+
         controls
       />
 
@@ -76,12 +78,12 @@ const AlphabetPage = () => {
           onMouseMove={draw}
           onMouseUp={stopDrawing}
           onMouseLeave={stopDrawing}
-          onTouchStart={startDrawing} // For touch devices
-          onTouchMove={draw} // For touch devices
-          onTouchEnd={stopDrawing} // For touch devices
+          onTouchStart={startDrawing}
+          onTouchMove={draw} 
+          onTouchEnd={stopDrawing}
           width={500}
           height={400}
-          className="border-2 border-gray-500"
+          className="border-2 border-gray-500 mb-3"
         />
       </div>
     </div>
