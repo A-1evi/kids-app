@@ -1,9 +1,18 @@
 import React from "react";
 
 const shapes = [
-  { name: "Circle", src: "/src/assets/circle.png" },
-  { name: "Square", src: "/src/assets/sqare.png" },
-  { name: "Triangle", src: "/src/assets/triangle.png" },
+  {
+    name: "Circle",
+    src: "https://ik.imagekit.io/tceymjb1w/kids-app/circle.png?updatedAt=1727167790295",
+  },
+  {
+    name: "Square",
+    src: "https://ik.imagekit.io/tceymjb1w/kids-app/sqare.png?updatedAt=1727167790275",
+  },
+  {
+    name: "Triangle",
+    src: "https://ik.imagekit.io/tceymjb1w/kids-app/images.png?updatedAt=1727167790057",
+  },
 ];
 
 const ShapesPage = () => {
