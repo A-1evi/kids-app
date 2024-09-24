@@ -1,31 +1,24 @@
+import React from "react";
+import { Viewer, Worker } from "@react-pdf-viewer/core";
+import packageJson from "D:/kids-app/package.json";
 
-import { Page, Text, View, Document, StyleSheet } from '@react-pdf/renderer';
-
-// Create styles
-const styles = StyleSheet.create({
-  page: {
-    flexDirection: 'row',
-    backgroundColor: '#E4E4E4'
-  },
-  section: {
-    margin: 100,
-    padding: 100,
-    flexGrow: 1
-  }
-});
-
-// Create Document Component
+// Import the styles
+import "@react-pdf-viewer/core/lib/styles/index.css";
+const pdfjsVersion = packageJson.dependencies["pdfjs-dist"];
 const Pdfviewer = () => (
-  <Document>
-    <Page size="A1" style={styles.page}>
-      <View style={styles.section}>
-        <Text>Section #1</Text>
-      </View>
-      <View style={styles.section}>
-        <Text>Section #2</Text>
-      </View>
-    </Page>
-  </Document>
+  <div
+    style={{
+      border: "1px solid rgba(0, 0, 0, 0.3)",
+      height: "850px",
+    }}
+  >
+    {/* Wrap Viewer with the Worker */}
+    <Worker
+      workerUrl={`https://unpkg.com/pdfjs-dist@${pdfjsVersion}/build/pdf.worker.min.js`}
+    >
+      <Viewer fileUrl="https://ik.imagekit.io/tceymjb1w/kids-app/curiousgeorge.pdf?updatedAt=1727180281155" />
+    </Worker>
+  </div>
 );
 
-export default Pdfviewer
+export default Pdfviewer;
