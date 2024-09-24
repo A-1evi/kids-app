@@ -5,7 +5,7 @@ const Alphabet = () => {
   const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     const navigate = useNavigate();
   const handleClick = (letter) => {
-    // This function is called when a letter is clicked.
+    // This function is called when a letter is clicked
     console.log(`You clicked on: ${letter}`);
     navigate(`/learn/alphabet/${letter}`);
 
